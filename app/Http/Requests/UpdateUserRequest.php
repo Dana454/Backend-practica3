@@ -30,7 +30,7 @@ class UpdateUserRequest extends FormRequest
             'email' => ['email', 'unique:users,email,' . $id],
             'hiring_date' => ['date'],
             'dui' => ['string', 'unique:users,dui,' . $id, 'regex:/^\d{8}-\d$/'],
-            'phone_number' => ['string', 'numeric'],
+            'phone_number' => ['string', 'regex:/^\d{8}$/'],
             'birth_date' => ['date', 'before:today'],
         ];
 
