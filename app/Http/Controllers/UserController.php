@@ -25,7 +25,7 @@ class UserController extends Controller
         if ($request -> has ('email')){
             $query->where('email', 'like', '%' . $request->email . '%');
         }
-        if ($request->query('trashed')=== 'true') {
+        if ($request->query('is_trashed')=== 'true') {
             $query->onlyTrashed();
         }
 
@@ -57,8 +57,7 @@ class UserController extends Controller
      * Display the specified resource.
      */
     public function show($id)
-    {//--------- Metodod Show ----------------
-    // Busca por id, find - ignora el softdelete, si no devuelve error 404
+    {
         $user = User::find($id);
 
         if(!$user) {
