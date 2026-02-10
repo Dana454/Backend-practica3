@@ -45,5 +45,5 @@ class UpdateUserRequest extends FormRequest
 
         return $rules;
     }
-    }
 }
+

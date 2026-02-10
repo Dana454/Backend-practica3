@@ -13,5 +13,6 @@ Route::group(['prefix' => 'v1'], function () {
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::patch('/users/{id}', [UserController::class, 'partialUpdate']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
-    Route::post('/users/{id}', [UserController::class, 'restore']);
+    Route::post('/users/{id}/restore', [UserController::class, 'restore']);
 });
+

@@ -97,7 +97,7 @@ class UserController extends Controller
             ], 404);
         }
 
-        $users->delete();
+        $user->delete();
         return response()->json([
             'message' => 'El usuario ha sido elimidado correctamente'
         ]);
